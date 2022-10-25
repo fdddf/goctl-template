@@ -3,4 +3,11 @@ package types{{if .containsTime}}
 import (
 	"time"
 ){{end}}
+
+type StdReply struct {
+	Code    int         `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
+}
+
 {{.types}}
